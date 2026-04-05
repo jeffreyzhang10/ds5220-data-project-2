@@ -1,0 +1,31 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: charlottesville-weather
+  namespace: default
+spec:
+  schedule: "0 * * * *"    # once an hour!
+  concurrencyPolicy: Forbid    # skip a run if the previous one is still going
+  successfulJobsHistoryLimit: 10
+  failedJobsHistoryLimit: 10
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: OnFailure
+          containers:
+            - name: charlottesville-weather
+              image: ghcr.io/jeffreyzhang10/weather-pipeline:latest
+              imagePullPolicy: Always
+              env:
+                - name: S3_DATA_KEY
+                  value: "data.csv"
+
+                - name: S3_BUCKET
+                  value: "bkf4cy-dp2-bucket"
+
+                - name: S3_PLOT_KEY
+                  value: "plot.png"
+
+                - name: AWS_REGION
+                  value: "us-east-1"
