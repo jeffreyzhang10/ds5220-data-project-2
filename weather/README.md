@@ -1,0 +1,3 @@
+# Data Source Summary 
+
+In this DS5220 Project, I am using data from Open Mateo's weather forecast API. As I was sitting outside on the lawn below the Rotunda, it was a particularly nice day out which saw students, tourists, and locals alike creating a really positive atmosphere around Grounds. To me personally, there is really nothing better than mid 70's weather with a slight breeze. Nonetheless, I decided to look at weather data in Charlottesville, just to be able to visualize how changes in weather might look, especially over this week, since it would be significantly cooler. 
