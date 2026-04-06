@@ -54,13 +54,23 @@ s3.upload_file("data.csv", S3_BUCKET, S3_DATA_KEY)
 print("Uploaded data.csv to S3")
 
 # create plot.png
+df["timestamp"] = pd.to_datetime(df["timestamp"])
+
+import matplotlib.dates as mdates
+
+# create plot.png
+plt.style.use("seaborn-v0_8-whitegrid")
 plt.figure(figsize=(10, 5))
-plt.plot(df["timestamp"], df["temperature"])
-plt.xticks(rotation=45)
-plt.xlabel("Time")
+plt.plot(df["timestamp"], df["temperature"], marker='o', linewidth = 2)
+plt.fill_between(df["timestamp"], df["temperature"], alpha = 0.2)
+plt.gca().xaxis.set_major_locator(mdates.HourLocator(interval = 3))  # every 3 hours
+plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%m-%d %H:%M'))
+
+plt.xticks(rotation = 90)
+plt.xlabel("")
 plt.ylabel("Temperature (°C)")
-plt.title("Charlottesville, VA Temperature Over Time")
-# plt.tight_layout()
+plt.title("Temperature in Charlottesville, VA since April 6, 2026")
+plt.tight_layout()
 
 # save plot 
 plt.savefig("plot.png")
