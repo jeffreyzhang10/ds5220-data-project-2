@@ -1,6 +1,6 @@
 # Data Source Summary 
 
-In this DS5220 Project, I am using data from Open Mateo's weather forecast API. As I was sitting outside on the lawn below the Rotunda, it was a particularly nice day out which saw students, tourists, and locals alike creating a really positive atmosphere around Grounds. To me personally, there is really nothing better than mid 70's weather with a slight breeze. Nonetheless, I decided to look at weather data in Charlottesville, just to be able to visualize how changes in weather might look, especially over this week, since it would be significantly cooler. Within the data itself, I am looking specifically at temperature and windspeed because of how nice it was, and analyzing changes over time. 
+In this DS5220 Project, I am using data from Open Meteo's weather forecast API. As I was sitting outside on the lawn below the Rotunda, it was a particularly nice day out which saw students, tourists, and locals alike creating a really positive atmosphere around Grounds. To me personally, there is really nothing better than mid 70's weather with a slight breeze. Nonetheless, I decided to look at weather data in Charlottesville, just to be able to visualize how changes in weather might look, especially over this week, since it would be significantly cooler. Within the data itself, I am looking specifically at temperature and windspeed because of how nice it was, and analyzing changes over time. 
 
 # Scheduled Process
 
@@ -18,7 +18,7 @@ A cumulative visualization based on the above dataset, which shows how temperatu
 
 ## Observations 
 
-Over the 72-hour period, the data and plot showed significant, but logically reasonable fluctuations in temperature throughout the day. Tempereatures were rose and were higher throughout the day and into the afternoon, but as the sun went down in the evening and into the night, temperatures tended to hit their lows. Given temperature fluctuations that mirror what I would have expected, general patterns persisted and did not have any surprises. 
+Over the 72-hour period, the data and plot showed significant, but logically reasonable fluctuations in temperature throughout the day. Tempereatures were rose and were higher throughout the day and into the afternoon, but as the sun went down in the evening and into the night, temperatures tended to hit their lows. Given temperature fluctuations that mirror what I would have expected, general patterns persisted and did not have any surprises. One other thing to note, as discussed with Professor Mcgee in class, is the absence of several points on the morning of April 7th for a period spanning a couple hours. This could be due to a variety of factors, such a temporary downtime for the API itself. As a result, it would be worth looking into the logs of the application to see what types of errors are present, especially as considering this in a production setting, this would be of major concern. 
 
 ## Discussion 
 
